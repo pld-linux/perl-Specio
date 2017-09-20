@@ -7,12 +7,12 @@
 Summary:	Test::Specio - Test helpers for Specio
 Summary(pl.UTF-8):	Test::Specio - pomocnicze funkcje i zmienne testowe dla Specio
 Name:		perl-Specio
-Version:	0.31
+Version:	0.40
 Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/D/DR/DROLSKY/Specio-%{version}.tar.gz
-# Source0-md5:	7b3c109fbf6550e282ef77ccd9991e10
+# Source0-md5:	a9a4e9c095186793c9468760cbdb1be7
 URL:		http://search.cpan.org/dist/Specio/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -55,15 +55,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__rm} $RPM_BUILD_ROOT%{perl_vendorlib}/TODO.pod \
-	$RPM_BUILD_ROOT%{_mandir}/man3/TODO.3pm
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README.md TODO.pod
+%doc Changes README.md
 %{perl_vendorlib}/Specio
 %{perl_vendorlib}/Specio.pm
 %{perl_vendorlib}/Test/Specio.pm
