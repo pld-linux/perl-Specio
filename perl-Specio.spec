@@ -7,12 +7,12 @@
 Summary:	Test::Specio - Test helpers for Specio
 Summary(pl.UTF-8):	Test::Specio - pomocnicze funkcje i zmienne testowe dla Specio
 Name:		perl-Specio
-Version:	0.40
+Version:	0.42
 Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/D/DR/DROLSKY/Specio-%{version}.tar.gz
-# Source0-md5:	a9a4e9c095186793c9468760cbdb1be7
+# Source0-md5:	215714bd0038defe4ca303d90c1ed585
 URL:		http://search.cpan.org/dist/Specio/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -23,9 +23,11 @@ BuildRequires:	perl-MRO-Compat
 BuildRequires:	perl-Role-Tiny >= 1.003003
 BuildRequires:	perl-Scalar-List-Utils >= 1.33
 BuildRequires:	perl-Storable
+BuildRequires:	perl-Sub-Quote
 BuildRequires:	perl-Test-Fatal
 BuildRequires:	perl-Test-Needs
 BuildRequires:	perl-Test-Simple >= 0.96
+BuildRequires:	perl-Try-Tiny
 BuildRequires:	perl-version >= 0.83
 %endif
 BuildArch:	noarch
@@ -60,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README.md
+%doc Changes README.md TODO.md
 %{perl_vendorlib}/Specio
 %{perl_vendorlib}/Specio.pm
 %{perl_vendorlib}/Test/Specio.pm
