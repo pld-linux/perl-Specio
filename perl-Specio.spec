@@ -3,7 +3,6 @@
 %bcond_without	tests		# do not perform "make test"
 #
 %define		pdir	Specio
-%include	/usr/lib/rpm/macros.perl
 Summary:	Test::Specio - Test helpers for Specio
 Summary(pl.UTF-8):	Test::Specio - pomocnicze funkcje i zmienne testowe dla Specio
 Name:		perl-Specio
