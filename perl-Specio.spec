@@ -6,12 +6,12 @@
 Summary:	Test::Specio - Test helpers for Specio
 Summary(pl.UTF-8):	Test::Specio - pomocnicze funkcje i zmienne testowe dla Specio
 Name:		perl-Specio
-Version:	0.46
+Version:	0.47
 Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/D/DR/DROLSKY/Specio-%{version}.tar.gz
-# Source0-md5:	aca3a183b46b93a8ce02009a2ccd868b
+# Source0-md5:	42a6734e5c02836f6d99646167694b96
 URL:		https://metacpan.org/release/Specio
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -29,8 +29,10 @@ BuildRequires:	perl-Test-Fatal
 BuildRequires:	perl-Test-Needs
 BuildRequires:	perl-Test-Simple >= 0.96
 BuildRequires:	perl-Try-Tiny
+BuildRequires:	perl-XString
 BuildRequires:	perl-version >= 0.83
 %endif
+Requires:	perl-XString
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
