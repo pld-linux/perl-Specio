@@ -1,29 +1,31 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define		pdir	Specio
 Summary:	Test::Specio - Test helpers for Specio
 Summary(pl.UTF-8):	Test::Specio - pomocnicze funkcje i zmienne testowe dla Specio
 Name:		perl-Specio
-Version:	0.47
+Version:	0.52
 Release:	1
 License:	Artistic v2.0
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/D/DR/DROLSKY/Specio-%{version}.tar.gz
-# Source0-md5:	42a6734e5c02836f6d99646167694b96
-URL:		https://metacpan.org/release/Specio
+Source0:	https://www.cpan.org/modules/by-authors/id/D/DR/DROLSKY/Specio-%{version}.tar.gz
+# Source0-md5:	c16c71c98ff007aac9ce0b88509f146f
+URL:		https://metacpan.org/dist/Specio
+BuildRequires:	perl-ExtUtils-MakeMaker
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
+BuildRequires:	perl-Clone
 BuildRequires:	perl-Devel-StackTrace
 BuildRequires:	perl-Eval-Closure
 BuildRequires:	perl-MRO-Compat
+BuildRequires:	perl-Module-Implementation
 BuildRequires:	perl-Module-Runtime
 BuildRequires:	perl-Role-Tiny >= 1.003003
 BuildRequires:	perl-Scalar-List-Utils >= 1.33
-BuildRequires:	perl-Storable
 BuildRequires:	perl-Sub-Quote
 BuildRequires:	perl-Test-Fatal
 BuildRequires:	perl-Test-Needs
