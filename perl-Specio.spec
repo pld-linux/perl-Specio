@@ -19,6 +19,7 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-Clone
+BuildRequires:	perl-Clone-PP
 BuildRequires:	perl-Devel-StackTrace
 BuildRequires:	perl-Eval-Closure
 BuildRequires:	perl-MRO-Compat
